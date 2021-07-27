@@ -20,13 +20,18 @@
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href="/profile">Logout</a>
-            <button class="no-button" id="logout">logout</button>
+            <h3>
+              <a href="/profile">Logout</a>
+              <button class="no-button" id="logout">logout</button>
+            </h3>
           {{else}}
-            <a href="/login">login</a>
+            <h3>
+              <a href="/login">login</a>
+            </h3>
           {{/if}}
         </nav>
       </header>
+
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{body}}}
