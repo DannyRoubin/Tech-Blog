@@ -15,13 +15,13 @@
           <a href="/">Home</a>
         </h3>
         <h3 style="margin-right: 1.35REM;">
-          <a href="/">Dashboard</a>
+          <a href="/profile">Dashboard</a>
         </h3>
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
             <h3>
-              <a href="/profile">Logout</a>
+              <a id="logout" href="/">logout</a>
             </h3>
           {{else}}
             <h3>
