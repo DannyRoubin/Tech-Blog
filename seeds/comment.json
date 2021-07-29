@@ -1,0 +1,12 @@
+[
+  {
+    "comment": "This is a test to see if comments are working",
+    "user_id": "1",
+    "blog_id": "1"
+  },
+  {
+    "comment": "This is a test to see if comments are working part 2",
+    "user_id": "2",
+    "blog_id": "2"
+  }
+]

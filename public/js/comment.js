@@ -2,21 +2,21 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const blogId = event.target.getAttribute("data-id");
-  const comment = document.querySelector("#blog-desc").value.trim();
+  const comment = document.querySelector("#comment-desc").value.trim();
 
-  if (name && description) {
-    const response = await fetch(`/api/blogs`, {
+  if (comment) {
+    const response = await fetch(`/api/comments`, {
       method: "POST",
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify({ comment, blogId }),
       headers: {
         "Content-Type": "application/json",
       },
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.assign(`/api/blogs/${blogId}`);
     } else {
-      alert("Failed to create blog");
+      alert("Failed to create comment");
     }
   }
 };
