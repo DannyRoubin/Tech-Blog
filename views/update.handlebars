@@ -1,0 +1,49 @@
+<div class="text-center display-flex flex-column justify-center">
+  <h4>Would you like to update or delete this blog?</h4>
+</div>
+
+<div class="row mt-3 border">
+  <div class="col-md-12">
+    <form class="form">
+      <div class="form-group">
+        <label for="blog_title">Title of your blog:</label>
+        <input
+          class="form-input"
+          type="text"
+          id="blog_title"
+          name="blog_title"
+          value="{{blogs.blog_title}}"
+        />
+      </div>
+      <div class="form-group">
+        <label for="blog_body">Body of your blog:</label>
+        <textarea
+          class="form-input"
+          id="blog_body"
+          name="blog_body"
+        >{{blogs.blog_body}}</textarea>
+      </div>
+      <div class="form-group text-center">
+        <button
+          type="submit"
+          id="updatebtn"
+          class="btn btn-primary"
+          data-id="{{blogs.id}}"
+        >Update</button>
+        <button
+          type="submit"
+          id="deletebtn"
+          class="btn btn-primary"
+          data-id="{{blogs.id}}"
+        >Delete</button>
+        <button
+          type="submit"
+          id="cancelbtn"
+          class="btn btn-primary"
+          data-id="{{blogs.id}}"
+        >Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="/js/updateBlog.js"></script>
