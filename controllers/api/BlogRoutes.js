@@ -97,7 +97,9 @@ router.delete("/:id", withAuth, async (req, res) => {
     });
 
     if (!blogData) {
-      res.status(404).json({ message: "No blog found with this id!" });
+      res
+        .status(404)
+        .json({ message: "Could not find a blog matching this id" });
       return;
     }
 
