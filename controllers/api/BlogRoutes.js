@@ -50,7 +50,7 @@ router.get("/:id", async (req, res) => {
           include: [
             {
               model: User,
-              attribtes: ["name"],
+              attributes: ["name"],
             },
           ],
         },
@@ -77,7 +77,7 @@ router.get("/:id", async (req, res) => {
     res.render("blog", {
       blogs,
       currentUser,
-      sessUserId: req.session.user_id,
+      sessionUserId: req.session.user_id,
       logged_in: req.session.logged_in,
     });
     console.log(res);

@@ -1,0 +1,55 @@
+<div>
+  <div class="border">
+    <h2 class="text-center" data-id="{{blogs.id}}">{{blogs.blog_title}}</h2>
+    <p>{{blogs.blog_body}}</p>
+    <p class="text-right side-note mb-0">Created by
+      {{blogs.user.name}}
+      on
+      {{format_date blogs.blog_date}}</p>
+  </div>
+  {{#if logged_in}}
+    <form class="form commentForm">
+      <div class="form-group">
+        <label for="comment_body">Comment:</label>
+        <textarea
+          class="form-input"
+          id="comment_body"
+          name="comment_body"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  {{/if}}
+  {{#if blogs.comments.length}}
+    <div class="border mt-3">
+      <h3 data-id="{{sessionUserId}}">Comments:</h3>
+      {{#each blogs.comments as |comment|}}
+        <div class="comment">
+          <p>{{comment.comment_body}}</p>
+          <div class="display-flex justify-space-between align-center">
+            <button
+              type="submit"
+              class="btn btn-primary delete-btn"
+              data-id="{{comment.id}},{{comment.user.id}}"
+            >Delete</button>
+            <div class="side-note text-right">
+              ~<span
+                class="userId"
+                data-id="{{comment.user.id}}"
+              >{{comment.user.name}}</span>
+              on
+              {{format_date comment.comment_date}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<script src="/js/commentDelete.js"></script>
+{{#if logged_in}}
+  <script src="/js/commentAdd.js"></script>
+{{/if}}

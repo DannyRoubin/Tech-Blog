@@ -12,13 +12,13 @@ router.get("/:id", withAuth, async (req, res) => {
           include: [
             {
               model: User,
-              attributes: ["user_name"],
+              attributes: ["name"],
             },
           ],
         },
         {
           model: User,
-          attributes: ["id", "user_name"],
+          attributes: ["id", "name"],
         },
       ],
     });
