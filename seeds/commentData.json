@@ -2,21 +2,21 @@
   {
     "comment_body": "test comment to check if comments are working 1",
     "user_id": 1,
-    "post_id": 1
+    "blog_id": 1
   },
   {
     "comment_body": "test comment to check if comments are working 2",
     "user_id": 2,
-    "post_id": 1
+    "blog_id": 1
   },
   {
     "comment_body": "test comment to check if comments are working 3",
     "user_id": 3,
-    "post_id": 2
+    "blog_id": 2
   },
   {
     "comment_body": "test comment to check if comments are working 4",
     "user_id": 1,
-    "post_id": 3
+    "blog_id": 3
   }
 ]
