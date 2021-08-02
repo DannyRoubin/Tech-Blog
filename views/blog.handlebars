@@ -8,7 +8,7 @@
       {{format_date blogs.blog_date}}</p>
   </div>
   {{#if logged_in}}
-    <form class="form commentForm">
+    <form class="form newCommentForm">
       <div class="form-group">
         <label for="comment_body">Comment:</label>
         <textarea
@@ -18,7 +18,12 @@
         ></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button
+          type="submit"
+          id="submitbtn"
+          data-id="{{blogs.id}}"
+          class="btn btn-primary"
+        >Submit</button>
       </div>
     </form>
   {{/if}}
@@ -49,7 +54,7 @@
   {{/if}}
 </div>
 
-<script src="/js/commentDelete.js"></script>
+<script src="/js/deletingComment.js"></script>
 {{#if logged_in}}
-  <script src="/js/commentAdd.js"></script>
+  <script src="/js/addingComment.js"></script>
 {{/if}}

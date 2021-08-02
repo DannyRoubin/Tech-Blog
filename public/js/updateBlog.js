@@ -18,7 +18,7 @@ const updateBlogHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/profile");
     } else {
-      alert("Failed to update blog");
+      alert("There was an error updating your blog, please try again");
     }
   }
 };
@@ -36,7 +36,7 @@ const deleteBlogHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/profile");
     } else {
-      alert("Failed to delete blog");
+      alert("There was an error deleting your blog, please try again");
     }
   }
 };
