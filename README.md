@@ -22,7 +22,7 @@ To use this app on your local machine please follow these steps. First clone thi
 
 ## App usage (Heroku link)
 
-To use the live version of this app simply click the following link and you'll be taken to the live site
+To use the live version of this app simply click the following link and you'll be taken to the live site: https://still-reaches-72482.herokuapp.com/
 
 ## App usage (once you're on the app)
 
