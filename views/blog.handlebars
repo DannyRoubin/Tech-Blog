@@ -29,21 +29,19 @@
   {{/if}}
   {{#if blogs.comments.length}}
     <div class="border mt-3">
-      <h3 data-id="{{sessionUserId}}">Comments:</h3>
+      <h3 class="sessionUserId" data-id="{{sessionUserId}}">Comments:</h3>
       {{#each blogs.comments as |comment|}}
         <div class="comment">
           <p>{{comment.comment_body}}</p>
           <div class="display-flex justify-space-between align-center">
             <button
               type="submit"
-              class="btn btn-primary delete-btn"
-              data-id="{{comment.id}},{{comment.user.id}}"
-            >Delete</button>
+              class="btn btn-primary deletebtn"
+              data-id="{{comment.id}},{{comment.user_id}}"
+            >Delete
+            </button>
             <div class="side-note text-right">
-              <span
-                class="userId"
-                data-id="{{comment.user.id}}"
-              >{{comment.user.name}}</span>
+              <span>{{comment.user.name}}</span>
               on
               {{format_date comment.comment_date}}
             </div>
